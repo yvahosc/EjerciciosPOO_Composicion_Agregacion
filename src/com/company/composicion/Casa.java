@@ -1,6 +1,5 @@
 package com.company.composicion;
 
-import java.util.Arrays;
 
 public class Casa {
     private Habitacion[] habitaciones;
@@ -24,12 +23,23 @@ public class Casa {
 
     public void destruirCasa(){
         habitaciones = new Habitacion[CAPACIDAD_MAXIMA];
+        cantidadHabitaciones = 0;
     }
 
     public void mostrarInformacionCasa() {
-        System.out.println("Casa: \n" +
-                "habitaciones: " + Arrays.toString(habitaciones) +
-                ", cantidadHabitaciones: " + cantidadHabitaciones +
-                ", CAPACIDAD_MAXIMA: " + CAPACIDAD_MAXIMA + ".");
+        if(cantidadHabitaciones == 0){
+            System.out.println("\nCasa: \n" +
+                    "Cantidad de habitaciones: " + cantidadHabitaciones +
+                    ", capacidad máxima: " + CAPACIDAD_MAXIMA +
+                    ", habitaciones: NO hay habitaciones.");
+        }else{
+            System.out.println("\nCasa: \n" +
+                    "Cantidad de habitaciones: " + cantidadHabitaciones +
+                    ", capacidad máxima: " + CAPACIDAD_MAXIMA +
+                    ", habitaciones: ");
+            for (int i = 0; i < cantidadHabitaciones; i++) {
+                habitaciones[i].mostrarInformacionHabitacion();
+            }
+        }
     }
 }
