@@ -29,4 +29,8 @@ public class Universidad {
     public int getCantidadDeEstudiantes(){
         return cantidadDeEstudiantes;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
 }
