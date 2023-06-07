@@ -16,4 +16,9 @@ public class Habitacion {
     public double getTamanhoHabitacion() {
         return tamanhoHabitacion;
     }
+
+    public void mostrarInformacionHabitacion() {
+        System.out.println("Número de habitación: " + numeroHabitacion +
+                ", tamaño de habitación: " + tamanhoHabitacion + ".");
+    }
 }
