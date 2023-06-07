@@ -10,4 +10,9 @@ public class Estudiante {
         this.edad = edad;
         this.numeroDeEstudiante = numeroDeEstudiante;
     }
+
+    public void mostrarInformacion() {
+        System.out.println("nombre: " + nombre + ", edad: " + edad + ", " +
+                "numero de estudiante: " + numeroDeEstudiante + ".");
+    }
 }
